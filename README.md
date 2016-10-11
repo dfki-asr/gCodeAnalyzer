@@ -1,6 +1,6 @@
 # gCodeAnalyzer
 gCodeAnalyzer is a Linked Data API for analyzing gCodes.
-
+Currently, gCodeAnalyzer provides price estimates for gCodes and is compliant with the [GoodRelations](http://www.heppnetz.de/projects/goodrelations/) Web vocabulary for e-commerce.
 
 ## Installation & Running
 ```
@@ -31,13 +31,13 @@ You can modify gCodeAnalyzer's listening port in the `pom.xml`
 ## Usage
 Get gCodeAnalyzer up and running. HTTP GET requests can be made against gCodeAnalyzer's form-style GET API as follows
 ```
-GET analyze?uri=GCODE HTTP/1.1
+GET analyze/price?uri=GCODE HTTP/1.1
 Server: http:localhost:8080
 Accept: text/turtle
 ```
 where `GCODE` is the URI of your gCode resource.
 
-Currently, gCodeAnalyzer responses with some price estimations for your gCode input.
+gCodeAnalyzer responses with some price estimations for your gCode input.
 ```
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -45,7 +45,7 @@ Currently, gCodeAnalyzer responses with some price estimations for your gCode in
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix GR:    <http://purl.org/goodrelations/v1#> .
 
-<http://localhost:8080/analyze?uri=http://localhost/~resc01/3301.gcode>
+<http://localhost:8080/analyze/price?uri=http://localhost/~resc01/3301.gcode>
         a                        GR:UnitPriceSpecification ;
         dcterms:references       <http://localhost/~resc01/3301.gcode> ;
         dcterms:source           "http://gcodeanalyzer-frontend"^^xsd:anyURI ;
@@ -55,7 +55,8 @@ Currently, gCodeAnalyzer responses with some price estimations for your gCode in
         GR:validFrom             "2016-10-11T20:03:52.867Z"^^xsd:dateTime .
 ```
 
-At some point, more gCode statistics will be added. Maybe you want to contribute?
+At some point, more API features (layer, speed, extrusion, distance print time, used filament, weight, etc.) will be added. 
+Maybe you want to contribute?
 
 ## Dependencies
 gCodeAnalyzer depends on [gCodeInfo](https://github.com/rmrschub/GCodeInfo), a mavenized fork of [GCodeInfo]{https://github.com/dietzm/GCodeInfo}.

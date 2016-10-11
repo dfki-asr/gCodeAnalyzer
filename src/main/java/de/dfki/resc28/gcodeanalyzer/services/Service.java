@@ -45,7 +45,7 @@ import de.dfki.resc28.gcodeanalyzer.vocabularies.GR;
 public class Service 
 {
 	@GET
-	@Path("/analyze")
+	@Path("/analyze/price")
 	@Produces({ MIME.CT_APPLICATION_JSON_LD, MIME.CT_APPLICATION_NQUADS, MIME.CT_APPLICATION_NTRIPLES, MIME.CT_APPLICATION_RDF_JSON, MIME.CT_APPLICATION_RDFXML, MIME.CT_APPLICATION_TRIX, MIME.CT_APPLICATION_XTURTLE, MIME.CT_TEXT_N3, MIME.CT_TEXT_TRIG, MIME.CT_TEXT_TURTLE })
 	public Response getGCodeInfo( @HeaderParam(HttpHeaders.ACCEPT) @DefaultValue(MIME.CT_TEXT_TURTLE) final String acceptType,
 								  @QueryParam("uri") String gCodeUri )
