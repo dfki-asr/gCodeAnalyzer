@@ -29,7 +29,7 @@ You can modify gCodeAnalyzer's listening port in the `pom.xml`
 ```
 
 ## Usage
-Get gCodeAnalyzer up and running. HTTP GET requests can be made against gCodeAnalyzer' form-style GET API as follows
+Get gCodeAnalyzer up and running. HTTP GET requests can be made against gCodeAnalyzer's form-style GET API as follows
 ```
 GET analyze?uri=GCODE HTTP/1.1
 Server: http:localhost:8080
