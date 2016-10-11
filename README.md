@@ -1,5 +1,5 @@
 # gCodeAnalyzer
-gCodeAnalyzer is a Linked Data API for analyzing gcodes.
+gCodeAnalyzer is a Linked Data API for analyzing gCodes.
 
 
 ## Installation & Running
