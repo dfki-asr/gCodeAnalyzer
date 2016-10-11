@@ -1,6 +1,6 @@
 # gCodeAnalyzer
 gCodeAnalyzer is a Linked Data API for analyzing gCodes.
-Currently, gCodeAnalyzer provides price estimates for gCodes and is compliant with the [GoodRelations](http://www.heppnetz.de/projects/goodrelations/) Web vocabulary for e-commerce.
+Currently, gCodeAnalyzer provides price estimates for 3D printing and is compliant with the [GoodRelations](http://www.heppnetz.de/projects/goodrelations/) Web vocabulary for e-commerce.
 
 ## Installation & Running
 ```
