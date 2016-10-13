@@ -14,3 +14,7 @@ hs_err_pid*
 /.settings/
 /.project
 /.classpath
+
+# Backup files and dependencies
+*~
+/deps
